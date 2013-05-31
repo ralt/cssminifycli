@@ -1,0 +1,7 @@
+.some selector {
+    property: value;
+}
+
+.other.selector {
+    background: url(http://google.fr/);
+}

@@ -1,2 +1,2 @@
 all:
-	go build -o main.go
+	go build -o dist/main
