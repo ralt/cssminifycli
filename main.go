@@ -23,5 +23,5 @@ func getBlocks(cb chan cssminify.Block, files []string, wg sync.WaitGroup) {
 	for _, file := range files {
 		cssminify.Blocks(cb, file, wg)
 	}
-	defer wg.Done()
+	wg.Done()
 }
