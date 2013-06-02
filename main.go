@@ -6,7 +6,14 @@ import (
 
 func main() {
 	files := cssminify.Files()
+	cb := make(chan cssminify.Block)
+
+	go getBlocks(cb, files)
+	go cssminify.Minify(cb)
+}
+
+func getBlocks(cb chan cssminify.Block, files []string) {
 	for _, file := range files {
-		cssminify.Minify(cssminify.Blocks(file))
+		cssminify.Blocks(cb, file)
 	}
 }
