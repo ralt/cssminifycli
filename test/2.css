@@ -1,6 +1,7 @@
 #selector     {
     some: prop;
     and: value;
+    background: url('http://margaine.com') 2px transparent;
     color: #000000;
 }
 
