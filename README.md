@@ -33,3 +33,6 @@ Yep. It's that simple! You usually want the minified CSS to go in a file though.
 ## License
 
 MIT License.
+
+
+  [0]: https://github.com/Ralt/cssminify
