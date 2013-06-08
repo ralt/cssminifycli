@@ -7,6 +7,6 @@ import (
 func main() {
 	files := cssminify.Files()
 	for _, file := range files {
-		cssminify.Minify(cssminify.Blocks(file))
+		cssminify.Minify(cssminify.Blocks(file), file)
 	}
 }
