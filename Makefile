@@ -1,2 +1,5 @@
 all:
-	go build -o dist/main
+	go build -o dist/cssminify
+
+install:
+	cp dist/cssminify /usr/bin

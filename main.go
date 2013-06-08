@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cssminify"
+	"github.com/Ralt/cssminify"
 )
 
 func main() {
