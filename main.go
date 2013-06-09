@@ -1,12 +1,16 @@
 package main
 
 import (
-	"github.com/Ralt/cssminify"
+	"cssminify"
 )
 
 func main() {
 	files := cssminify.Files()
+	f := make(chan string)
+	b := make(chan []cssminify.Block)
+	go cssminify.Blocks(f, b)
+	go cssminify.Minify(b)
 	for _, file := range files {
-		cssminify.Minify(cssminify.Blocks(file), file)
+		f <- file
 	}
 }
